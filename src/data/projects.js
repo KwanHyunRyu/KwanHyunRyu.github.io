@@ -71,9 +71,9 @@ export const projects = [
       {
         label: 'Cross-Team Communication',
         description:
-          '인프라팀(서버/네트워크/미들웨어 엔지니어)과의 개발-운영 간 소통 담당.',
+          '개발팀과 인프라팀 간 기술 요구사항 조율 및 배포 협업 리드.',
         detail:
-          '사내 솔루션 특성상 고객사 환경에 배포할 때 서버 엔지니어, 네트워크 엔지니어, 미들웨어 엔지니어 등 인프라팀과의 긴밀한 협업이 필수적이었습니다. 개발팀과 인프라팀 사이에서 기술적 요구사항을 번역하고 전달하는 소통 담당자 역할을 수행하며, 서버 스펙 산정, 네트워크 구성 협의, WAS 설정 조율 등을 주도했습니다. 이를 통해 배포 과정에서의 커뮤니케이션 병목을 해소하고 원활한 프로젝트 진행을 이끌었습니다.',
+          '사내 솔루션 특성상 고객사 환경에 배포할 때 서버, 네트워크, 미들웨어 엔지니어 등 인프라팀과의 긴밀한 협업이 필수적이었습니다. 개발 요구사항을 인프라 관점의 언어로 번역하여 전달하는 브릿지 역할을 수행하며, 서버 스펙 산정, 네트워크 토폴로지 협의, WAS 설정 조율 등 배포 전 과정의 기술 커뮤니케이션을 주도했습니다. 이를 통해 부서 간 인식 차이에서 발생하는 배포 지연을 줄이고, 원활한 프로젝트 진행을 이끌었습니다.',
       },
     ],
     insight:
@@ -90,6 +90,7 @@ export const projects = [
     tech: ['Java 17', 'Spring Boot', 'JPA', 'PostgreSQL'],
     accent: 'cyan',
     icon: 'Globe',
+    architecture: '요청기관 → ORIS(중계) → BOK(한국은행) | Client → WEB → WAS(API) → DB | Client → WEB → WAS(API) → BOK 연동',
     highlights: [
       {
         label: 'Architecture',
@@ -152,6 +153,7 @@ export const projects = [
     tech: ['Go (Golang)', 'Java 17', 'PHP (CodeIgniter)', 'MySQL'],
     accent: 'green',
     icon: 'Server',
+    architecture: 'VMware 기반 2-Tier 구성 | [AP-SERVER] 회원사 → API Service → Web Service → BOK Service → BOK(한국은행) | [DB-SERVER] Cert Server + DB | Crl-fetcher: 인증서 폐기 목록 관리',
     highlights: [
       {
         label: 'Polyglot',

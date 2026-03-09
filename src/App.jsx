@@ -277,7 +277,7 @@ function App() {
               함께 일하고 싶으시다면 언제든 연락주세요.
             </p>
 
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4">
               <a
                 href="tel:+821048561382"
                 className="inline-flex items-center gap-3 px-6 py-3.5 rounded-xl bg-dark-800 border border-border hover:border-accent-cyan/50 hover:bg-dark-700 text-text-primary font-medium text-sm transition-all"
@@ -293,13 +293,22 @@ function App() {
                 fbrhksgus2@gmail.com
               </a>
               <a
-                href="https://github.com/RyuKwanHyun"
+                href="https://github.com/KwanHyunRyu"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 px-6 py-3.5 rounded-xl bg-dark-800 border border-border hover:border-accent-purple/50 hover:bg-dark-700 text-text-primary font-medium text-sm transition-all"
               >
                 <Github className="w-5 h-5 text-accent-purple" />
                 GitHub
+              </a>
+              <a
+                href="https://github.com/RyuKwanHyun"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 px-6 py-3.5 rounded-xl bg-dark-800 border border-border hover:border-accent-purple/50 hover:bg-dark-700 text-text-muted font-medium text-sm transition-all"
+              >
+                <Github className="w-5 h-5 text-text-muted" />
+                GitHub (Archive)
               </a>
             </div>
           </motion.div>
