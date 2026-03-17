@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Shield, Globe, Server, ChevronRight, Lightbulb, Calendar, GitBranch } from 'lucide-react';
+import ArchitectureDiagram from './ArchitectureDiagram';
 
 const iconMap = { Shield, Globe, Server };
 
@@ -165,18 +166,14 @@ export default function ProjectModal({ project, onClose }) {
               ))}
             </div>
 
-            {/* Architecture */}
+            {/* Architecture Diagram */}
             {project.architecture && (
-              <div className="mt-8 p-5 rounded-xl bg-dark-700/50 border border-border">
-                <div className="flex items-start gap-3">
-                  <GitBranch className={`w-5 h-5 mt-0.5 ${colors.text} shrink-0`} />
-                  <div>
-                    <h4 className={`text-sm font-bold ${colors.text} mb-2`}>Architecture Flow</h4>
-                    <p className="text-text-secondary text-sm leading-relaxed font-mono">
-                      {project.architecture}
-                    </p>
-                  </div>
-                </div>
+              <div className="mt-8">
+                <h3 className="text-lg font-semibold text-text-primary flex items-center gap-2 mb-3">
+                  <GitBranch className={`w-5 h-5 ${colors.text}`} />
+                  Architecture
+                </h3>
+                <ArchitectureDiagram projectId={project.id} />
               </div>
             )}
 
