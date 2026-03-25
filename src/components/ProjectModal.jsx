@@ -62,7 +62,7 @@ export default function ProjectModal({ project, onClose }) {
           animate={{ opacity: 1, y: 0, scale: 1 }}
           exit={{ opacity: 0, y: 40, scale: 0.97 }}
           transition={{ type: 'spring', damping: 25, stiffness: 300 }}
-          className="relative w-full max-w-3xl my-8 sm:my-16 rounded-2xl border border-border bg-dark-800 shadow-2xl"
+          className="relative w-full max-w-3xl my-8 sm:my-16 rounded-2xl border border-border-card bg-dark-800 shadow-2xl shadow-accent-purple/5"
           onClick={(e) => e.stopPropagation()}
         >
           {/* Header */}

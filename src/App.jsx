@@ -22,15 +22,16 @@ function App() {
   const [selectedProject, setSelectedProject] = useState(null);
 
   return (
-    <div className="min-h-screen bg-dark-950">
+    <div className="min-h-screen bg-dark-950 overflow-x-hidden">
       <Header />
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden">
-        {/* Background gradient orbs */}
+        {/* Background gradient orbs — warm navy glow */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute -top-40 -right-40 w-96 h-96 bg-accent-blue/5 rounded-full blur-[120px]" />
-          <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-accent-purple/5 rounded-full blur-[120px]" />
+          <div className="absolute -top-40 -right-40 w-96 h-96 bg-accent-purple/6 rounded-full blur-[120px]" />
+          <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-accent-blue/5 rounded-full blur-[120px]" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent-purple/3 rounded-full blur-[200px]" />
         </div>
 
         {/* Grid pattern overlay */}
@@ -63,7 +64,7 @@ function App() {
           >
             <span className="text-text-primary">안녕하세요,</span>
             <br />
-            <span className="bg-gradient-to-r from-accent-blue via-accent-cyan to-accent-purple bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-accent-purple via-accent-blue to-accent-cyan bg-clip-text text-transparent">
               류관현
             </span>
             <span className="text-text-primary">입니다</span>
@@ -87,14 +88,14 @@ function App() {
           >
             <a
               href="#projects"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-accent-blue hover:bg-accent-blue/90 text-white font-medium text-sm transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-accent-purple/80 to-accent-blue/80 hover:from-accent-purple hover:to-accent-blue text-white font-medium text-sm transition-all duration-300 shadow-lg shadow-accent-purple/20 hover:shadow-accent-purple/30"
             >
               프로젝트 보기
               <ChevronDown className="w-4 h-4" />
             </a>
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-dark-700 hover:bg-dark-600 text-text-primary font-medium text-sm border border-border transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-dark-700 hover:bg-dark-600 text-text-primary font-medium text-sm border border-border-card hover:border-accent-purple/40 transition-all duration-300"
             >
               연락하기
             </a>
@@ -136,7 +137,7 @@ function App() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="mb-12 p-6 rounded-2xl bg-dark-800/60 border border-border"
+            className="mb-12 p-6 rounded-2xl bg-dark-800/60 border border-border-card"
           >
             <div className="flex items-center gap-3 mb-4">
               <Briefcase className="w-5 h-5 text-accent-blue" />
@@ -161,7 +162,7 @@ function App() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="mb-12 p-6 rounded-2xl bg-dark-800/60 border border-border"
+            className="mb-12 p-6 rounded-2xl bg-dark-800/60 border border-border-card"
           >
             <div className="flex items-center gap-3 mb-4">
               <GraduationCap className="w-5 h-5 text-accent-cyan" />
@@ -213,7 +214,7 @@ function App() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="p-6 rounded-2xl bg-dark-800/60 border border-border hover:border-dark-500 transition-colors"
+                className="p-6 rounded-2xl bg-dark-800/60 border border-border-card hover:border-dark-500 transition-colors"
               >
                 <item.icon className={`w-8 h-8 text-${item.color} mb-4`} />
                 <h3 className="text-lg font-semibold text-text-primary mb-2">
@@ -280,14 +281,14 @@ function App() {
             <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4">
               <a
                 href="tel:+821048561382"
-                className="inline-flex items-center gap-3 px-6 py-3.5 rounded-xl bg-dark-800 border border-border hover:border-accent-cyan/50 hover:bg-dark-700 text-text-primary font-medium text-sm transition-all"
+                className="inline-flex items-center gap-3 px-6 py-3.5 rounded-xl bg-dark-800 border border-border-card hover:border-accent-cyan/50 hover:bg-dark-700 text-text-primary font-medium text-sm transition-all"
               >
                 <Phone className="w-5 h-5 text-accent-cyan" />
                 010-4856-1382
               </a>
               <a
                 href="mailto:fbrhksgus2@gmail.com"
-                className="inline-flex items-center gap-3 px-6 py-3.5 rounded-xl bg-dark-800 border border-border hover:border-accent-blue/50 hover:bg-dark-700 text-text-primary font-medium text-sm transition-all"
+                className="inline-flex items-center gap-3 px-6 py-3.5 rounded-xl bg-dark-800 border border-border-card hover:border-accent-blue/50 hover:bg-dark-700 text-text-primary font-medium text-sm transition-all"
               >
                 <Mail className="w-5 h-5 text-accent-blue" />
                 fbrhksgus2@gmail.com
@@ -296,7 +297,7 @@ function App() {
                 href="https://github.com/KwanHyunRyu"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 px-6 py-3.5 rounded-xl bg-dark-800 border border-border hover:border-accent-purple/50 hover:bg-dark-700 text-text-primary font-medium text-sm transition-all"
+                className="inline-flex items-center gap-3 px-6 py-3.5 rounded-xl bg-dark-800 border border-border-card hover:border-accent-purple/50 hover:bg-dark-700 text-text-primary font-medium text-sm transition-all"
               >
                 <Github className="w-5 h-5 text-accent-purple" />
                 GitHub
@@ -305,7 +306,7 @@ function App() {
                 href="https://github.com/RyuKwanHyun"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 px-6 py-3.5 rounded-xl bg-dark-800 border border-border hover:border-accent-purple/50 hover:bg-dark-700 text-text-muted font-medium text-sm transition-all"
+                className="inline-flex items-center gap-3 px-6 py-3.5 rounded-xl bg-dark-800 border border-border-card hover:border-accent-purple/50 hover:bg-dark-700 text-text-muted font-medium text-sm transition-all"
               >
                 <Github className="w-5 h-5 text-text-muted" />
                 GitHub (Archive)

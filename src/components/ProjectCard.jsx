@@ -12,25 +12,28 @@ const accentMap = {
     bg: 'bg-accent-blue/10',
     border: 'border-accent-blue/30',
     text: 'text-accent-blue',
-    glow: 'hover:shadow-[0_0_30px_rgba(79,143,247,0.15)]',
+    glow: 'hover:shadow-[0_0_30px_rgba(123,164,212,0.15)]',
     gradient: 'from-accent-blue/20 to-transparent',
     badge: 'bg-accent-blue/15 text-accent-blue',
+    hoverBorder: 'hover:border-accent-blue/40',
   },
   cyan: {
     bg: 'bg-accent-cyan/10',
     border: 'border-accent-cyan/30',
     text: 'text-accent-cyan',
-    glow: 'hover:shadow-[0_0_30px_rgba(34,211,238,0.15)]',
+    glow: 'hover:shadow-[0_0_30px_rgba(107,192,200,0.15)]',
     gradient: 'from-accent-cyan/20 to-transparent',
     badge: 'bg-accent-cyan/15 text-accent-cyan',
+    hoverBorder: 'hover:border-accent-cyan/40',
   },
   green: {
     bg: 'bg-accent-green/10',
     border: 'border-accent-green/30',
     text: 'text-accent-green',
-    glow: 'hover:shadow-[0_0_30px_rgba(52,211,153,0.15)]',
+    glow: 'hover:shadow-[0_0_30px_rgba(109,186,138,0.15)]',
     gradient: 'from-accent-green/20 to-transparent',
     badge: 'bg-accent-green/15 text-accent-green',
+    hoverBorder: 'hover:border-accent-green/40',
   },
 };
 
@@ -47,11 +50,15 @@ export default function ProjectCard({ project, onClick, index }) {
     >
       <div
         onClick={onClick}
-        className={`group relative cursor-pointer rounded-2xl border border-border bg-dark-800/60 backdrop-blur-sm p-6 sm:p-8 transition-all duration-300 ${colors.glow} hover:border-${project.accent === 'blue' ? 'accent-blue' : project.accent === 'cyan' ? 'accent-cyan' : 'accent-green'}/40 hover:-translate-y-1`}
+        className={`group relative cursor-pointer rounded-2xl border border-border-card bg-dark-800/60 backdrop-blur-sm p-6 sm:p-8 transition-all duration-300 ${colors.glow} ${colors.hoverBorder} hover:-translate-y-1`}
       >
-        {/* Top gradient accent */}
+        {/* Top gradient accent line */}
         <div
           className={`absolute inset-x-0 top-0 h-px bg-gradient-to-r ${colors.gradient}`}
+        />
+        {/* Bottom subtle gradient line */}
+        <div
+          className={`absolute inset-x-0 bottom-0 h-px bg-gradient-to-r ${colors.gradient} opacity-40`}
         />
 
         {/* Icon & Title */}
